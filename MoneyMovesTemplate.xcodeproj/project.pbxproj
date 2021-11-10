@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2306A11C33072AB25BB29151 /* Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5876DD96448BA1AF13761D4F /* Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests.framework */; };
+		BC3579C4272A7DF30051E896 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3579C3272A7DF30051E896 /* ListTableViewCell.swift */; };
+		BC5EBC50272A71980094218F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC5EBC4F272A71980094218F /* GoogleService-Info.plist */; };
 		BCBDBA8B270CE57700E96805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBA8A270CE57700E96805 /* AppDelegate.swift */; };
 		BCBDBA8D270CE57700E96805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBA8C270CE57700E96805 /* SceneDelegate.swift */; };
-		BCBDBA8F270CE57700E96805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBA8E270CE57700E96805 /* ViewController.swift */; };
 		BCBDBA92270CE57700E96805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBDBA90270CE57700E96805 /* Main.storyboard */; };
 		BCBDBA95270CE57700E96805 /* MoneyMovesTemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBA93270CE57700E96805 /* MoneyMovesTemplate.xcdatamodeld */; };
 		BCBDBA97270CE57800E96805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCBDBA96270CE57800E96805 /* Assets.xcassets */; };
@@ -17,6 +19,16 @@
 		BCBDBAA5270CE57800E96805 /* MoneyMovesTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAA4270CE57800E96805 /* MoneyMovesTemplateTests.swift */; };
 		BCBDBAAF270CE57800E96805 /* MoneyMovesTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAAE270CE57800E96805 /* MoneyMovesTemplateUITests.swift */; };
 		BCBDBAB1270CE57800E96805 /* MoneyMovesTemplateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAB0270CE57800E96805 /* MoneyMovesTemplateUITestsLaunchTests.swift */; };
+		BCBDBAC6270CE9F200E96805 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBABE270CE9F100E96805 /* TabBarController.swift */; };
+		BCBDBAC7270CE9F200E96805 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBABF270CE9F100E96805 /* RegisterVC.swift */; };
+		BCBDBAC8270CE9F200E96805 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC0270CE9F100E96805 /* ListVC.swift */; };
+		BCBDBAC9270CE9F200E96805 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC1270CE9F200E96805 /* HomeVC.swift */; };
+		BCBDBACA270CE9F200E96805 /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC2270CE9F200E96805 /* PreferencesVC.swift */; };
+		BCBDBACB270CE9F200E96805 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC3270CE9F200E96805 /* CalendarVC.swift */; };
+		BCBDBACC270CE9F200E96805 /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC4270CE9F200E96805 /* AddTransactionVC.swift */; };
+		BCBDBACF270CF60000E96805 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBACE270CF60000E96805 /* LoginVC.swift */; };
+		D353B41D192DEC06C45EDC5F /* Pods_MoneyMovesTemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B906AE168A8864E106553ABD /* Pods_MoneyMovesTemplateTests.framework */; };
+		D8EC6A3A6D301468A637A282 /* Pods_MoneyMovesTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3668D0F2637D265ADDE6EAEE /* Pods_MoneyMovesTemplate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +49,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1467BBA5EEBC98A82BDF7409 /* Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.release.xcconfig"; path = "Target Support Files/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3668D0F2637D265ADDE6EAEE /* Pods_MoneyMovesTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyMovesTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40BD12EECA37B745D1EFE0B0 /* Pods-MoneyMovesTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyMovesTemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-MoneyMovesTemplateTests/Pods-MoneyMovesTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5876DD96448BA1AF13761D4F /* Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E080B881E939003655BA0F /* Pods-MoneyMovesTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyMovesTemplate.debug.xcconfig"; path = "Target Support Files/Pods-MoneyMovesTemplate/Pods-MoneyMovesTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		9CC42FD6DC0707A3235A7122 /* Pods-MoneyMovesTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyMovesTemplate.release.xcconfig"; path = "Target Support Files/Pods-MoneyMovesTemplate/Pods-MoneyMovesTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		A26F50F88727C1A430DFF9DB /* Pods-MoneyMovesTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyMovesTemplateTests.release.xcconfig"; path = "Target Support Files/Pods-MoneyMovesTemplateTests/Pods-MoneyMovesTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		B906AE168A8864E106553ABD /* Pods_MoneyMovesTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyMovesTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC3579C2272A72C30051E896 /* MoneyMovesTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoneyMovesTemplate.entitlements; sourceTree = "<group>"; };
+		BC3579C3272A7DF30051E896 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		BC5EBC4F272A71980094218F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCBDBA87270CE57700E96805 /* MoneyMovesTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyMovesTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBDBA8A270CE57700E96805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCBDBA8C270CE57700E96805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCBDBA8E270CE57700E96805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCBDBA91270CE57700E96805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCBDBA94270CE57700E96805 /* MoneyMovesTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyMovesTemplate.xcdatamodel; sourceTree = "<group>"; };
 		BCBDBA96270CE57800E96805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +73,15 @@
 		BCBDBAAA270CE57800E96805 /* MoneyMovesTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyMovesTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBDBAAE270CE57800E96805 /* MoneyMovesTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyMovesTemplateUITests.swift; sourceTree = "<group>"; };
 		BCBDBAB0270CE57800E96805 /* MoneyMovesTemplateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyMovesTemplateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BCBDBABE270CE9F100E96805 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		BCBDBABF270CE9F100E96805 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		BCBDBAC0270CE9F100E96805 /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		BCBDBAC1270CE9F200E96805 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BCBDBAC2270CE9F200E96805 /* PreferencesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesVC.swift; sourceTree = "<group>"; };
+		BCBDBAC3270CE9F200E96805 /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		BCBDBAC4270CE9F200E96805 /* AddTransactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
+		BCBDBACE270CF60000E96805 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FB89AF4E61CB28B73773BB8D /* Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EC6A3A6D301468A637A282 /* Pods_MoneyMovesTemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D353B41D192DEC06C45EDC5F /* Pods_MoneyMovesTemplateTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +105,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2306A11C33072AB25BB29151 /* Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55707E0595749960BCB2AA85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81E080B881E939003655BA0F /* Pods-MoneyMovesTemplate.debug.xcconfig */,
+				9CC42FD6DC0707A3235A7122 /* Pods-MoneyMovesTemplate.release.xcconfig */,
+				FB89AF4E61CB28B73773BB8D /* Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.debug.xcconfig */,
+				1467BBA5EEBC98A82BDF7409 /* Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.release.xcconfig */,
+				40BD12EECA37B745D1EFE0B0 /* Pods-MoneyMovesTemplateTests.debug.xcconfig */,
+				A26F50F88727C1A430DFF9DB /* Pods-MoneyMovesTemplateTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC860AFE5753AFE190C5590C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3668D0F2637D265ADDE6EAEE /* Pods_MoneyMovesTemplate.framework */,
+				5876DD96448BA1AF13761D4F /* Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests.framework */,
+				B906AE168A8864E106553ABD /* Pods_MoneyMovesTemplateTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCBDBA7E270CE57700E96805 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +142,8 @@
 				BCBDBAA3270CE57800E96805 /* MoneyMovesTemplateTests */,
 				BCBDBAAD270CE57800E96805 /* MoneyMovesTemplateUITests */,
 				BCBDBA88270CE57700E96805 /* Products */,
+				55707E0595749960BCB2AA85 /* Pods */,
+				BC860AFE5753AFE190C5590C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +160,17 @@
 		BCBDBA89270CE57700E96805 /* MoneyMovesTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				BC3579C2272A72C30051E896 /* MoneyMovesTemplate.entitlements */,
+				BC5EBC4F272A71980094218F /* GoogleService-Info.plist */,
+				BCBDBABD270CE9C800E96805 /* VCs */,
 				BCBDBA8A270CE57700E96805 /* AppDelegate.swift */,
 				BCBDBA8C270CE57700E96805 /* SceneDelegate.swift */,
-				BCBDBA8E270CE57700E96805 /* ViewController.swift */,
 				BCBDBA90270CE57700E96805 /* Main.storyboard */,
 				BCBDBA96270CE57800E96805 /* Assets.xcassets */,
 				BCBDBA98270CE57800E96805 /* LaunchScreen.storyboard */,
 				BCBDBA9B270CE57800E96805 /* Info.plist */,
 				BCBDBA93270CE57700E96805 /* MoneyMovesTemplate.xcdatamodeld */,
+				BC3579C3272A7DF30051E896 /* ListTableViewCell.swift */,
 			);
 			path = MoneyMovesTemplate;
 			sourceTree = "<group>";
@@ -130,6 +192,21 @@
 			path = MoneyMovesTemplateUITests;
 			sourceTree = "<group>";
 		};
+		BCBDBABD270CE9C800E96805 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				BCBDBAC4270CE9F200E96805 /* AddTransactionVC.swift */,
+				BCBDBAC3270CE9F200E96805 /* CalendarVC.swift */,
+				BCBDBAC1270CE9F200E96805 /* HomeVC.swift */,
+				BCBDBAC0270CE9F100E96805 /* ListVC.swift */,
+				BCBDBAC2270CE9F200E96805 /* PreferencesVC.swift */,
+				BCBDBABF270CE9F100E96805 /* RegisterVC.swift */,
+				BCBDBABE270CE9F100E96805 /* TabBarController.swift */,
+				BCBDBACE270CF60000E96805 /* LoginVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCBDBAB4270CE57800E96805 /* Build configuration list for PBXNativeTarget "MoneyMovesTemplate" */;
 			buildPhases = (
+				4E3D3D0ED92456979125DED7 /* [CP] Check Pods Manifest.lock */,
 				BCBDBA83270CE57700E96805 /* Sources */,
 				BCBDBA84270CE57700E96805 /* Frameworks */,
 				BCBDBA85270CE57700E96805 /* Resources */,
+				E062B603E920F10161302351 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCBDBAB7270CE57800E96805 /* Build configuration list for PBXNativeTarget "MoneyMovesTemplateTests" */;
 			buildPhases = (
+				E210A23AE368E6BE554F5D35 /* [CP] Check Pods Manifest.lock */,
 				BCBDBA9C270CE57800E96805 /* Sources */,
 				BCBDBA9D270CE57800E96805 /* Frameworks */,
 				BCBDBA9E270CE57800E96805 /* Resources */,
@@ -172,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCBDBABA270CE57800E96805 /* Build configuration list for PBXNativeTarget "MoneyMovesTemplateUITests" */;
 			buildPhases = (
+				5322184A6D6861D4B10264DE /* [CP] Check Pods Manifest.lock */,
 				BCBDBAA6270CE57800E96805 /* Sources */,
 				BCBDBAA7270CE57800E96805 /* Frameworks */,
 				BCBDBAA8270CE57800E96805 /* Resources */,
+				EBFEAC81CF4B91B641454456 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,7 +292,7 @@
 				};
 			};
 			buildConfigurationList = BCBDBA82270CE57700E96805 /* Build configuration list for PBXProject "MoneyMovesTemplate" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -235,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCBDBA9A270CE57800E96805 /* LaunchScreen.storyboard in Resources */,
+				BC5EBC50272A71980094218F /* GoogleService-Info.plist in Resources */,
 				BCBDBA97270CE57800E96805 /* Assets.xcassets in Resources */,
 				BCBDBA92270CE57700E96805 /* Main.storyboard in Resources */,
 			);
@@ -256,15 +339,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E3D3D0ED92456979125DED7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyMovesTemplate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5322184A6D6861D4B10264DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E062B603E920F10161302351 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyMovesTemplate/Pods-MoneyMovesTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyMovesTemplate/Pods-MoneyMovesTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoneyMovesTemplate/Pods-MoneyMovesTemplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E210A23AE368E6BE554F5D35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyMovesTemplateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBFEAC81CF4B91B641454456 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCBDBA83270CE57700E96805 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCBDBA8F270CE57700E96805 /* ViewController.swift in Sources */,
+				BCBDBACF270CF60000E96805 /* LoginVC.swift in Sources */,
+				BCBDBAC8270CE9F200E96805 /* ListVC.swift in Sources */,
+				BCBDBACA270CE9F200E96805 /* PreferencesVC.swift in Sources */,
+				BCBDBAC9270CE9F200E96805 /* HomeVC.swift in Sources */,
 				BCBDBA95270CE57700E96805 /* MoneyMovesTemplate.xcdatamodeld in Sources */,
+				BC3579C4272A7DF30051E896 /* ListTableViewCell.swift in Sources */,
+				BCBDBAC6270CE9F200E96805 /* TabBarController.swift in Sources */,
+				BCBDBACC270CE9F200E96805 /* AddTransactionVC.swift in Sources */,
+				BCBDBACB270CE9F200E96805 /* CalendarVC.swift in Sources */,
 				BCBDBA8B270CE57700E96805 /* AppDelegate.swift in Sources */,
 				BCBDBA8D270CE57700E96805 /* SceneDelegate.swift in Sources */,
+				BCBDBAC7270CE9F200E96805 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,9 +632,11 @@
 		};
 		BCBDBAB5270CE57800E96805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81E080B881E939003655BA0F /* Pods-MoneyMovesTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MoneyMovesTemplate/MoneyMovesTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = APVYBSM8L7;
@@ -466,9 +662,11 @@
 		};
 		BCBDBAB6270CE57800E96805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CC42FD6DC0707A3235A7122 /* Pods-MoneyMovesTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MoneyMovesTemplate/MoneyMovesTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = APVYBSM8L7;
@@ -494,6 +692,7 @@
 		};
 		BCBDBAB8270CE57800E96805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40BD12EECA37B745D1EFE0B0 /* Pods-MoneyMovesTemplateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +718,7 @@
 		};
 		BCBDBAB9270CE57800E96805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A26F50F88727C1A430DFF9DB /* Pods-MoneyMovesTemplateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +744,7 @@
 		};
 		BCBDBABB270CE57800E96805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB89AF4E61CB28B73773BB8D /* Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -567,6 +768,7 @@
 		};
 		BCBDBABC270CE57800E96805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1467BBA5EEBC98A82BDF7409 /* Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
