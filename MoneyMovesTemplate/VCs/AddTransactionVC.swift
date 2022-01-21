@@ -1,28 +1,35 @@
-//
-//  AddTransactionVC.swift
-//  MoneyMoves
-//
-//  Created by Sherron Thomas on 10/4/21.
-//
-
 import CoreData
 import UIKit
+import AVFoundation
+import AVKit
 
-class AddTransactionVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class AddTransactionVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, AVAudioPlayerDelegate {
     
+    @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var labelField: UITextField!
     @IBOutlet weak var moneyField: UITextField!
+    @IBOutlet weak var picker: UIPickerView!
+    
+    static let instance = AddTransactionVC()
+    let kCategories = "categories"
+    let defaults = UserDefaults.standard
     
     var defaultCategories: [String] = ["Food", "Utilities", "Shopping"]
     var category: String = ""
-    let kCategories = "categories"
-    let defaults = UserDefaults.standard
+    var soundPlayer: AVAudioPlayer?
     var userCategories: [String] = []
-    
     var amount: Int = 0
     
-    @IBOutlet weak var picker: UIPickerView!
+    func playSound() {
+        let url = Bundle.main.url(forResource: "money", withExtension: ".mp3")
+        do {
+            soundPlayer = try AVAudioPlayer(contentsOf: url!)
+            soundPlayer?.play()
+        } catch let error {
+            print("error playing sound. \(error.localizedDescription)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +67,7 @@ class AddTransactionVC: UIViewController, UIPickerViewDelegate, UIPickerViewData
         }
         userCategories = defaults.object(forKey: kCategories) as! [String]
         self.tabBarController?.tabBar.isHidden = true
+        category = userCategories[0]
         changeDarkMode()
     }
     
@@ -96,6 +104,9 @@ class AddTransactionVC: UIViewController, UIPickerViewDelegate, UIPickerViewData
         else {
             let cost = Double(amount/100) + Double(amount%100)/100
             storeEntry(entryDate: datePicker.date, entryLabel: labelField.text!, entryCost: cost, entryCategory: category)
+            if defaults.bool(forKey: "soundEffects") {
+                AddTransactionVC.instance.playSound()
+            }            
             if let navController = self.navigationController {
                 navController.popViewController(animated: true)
             }
@@ -105,7 +116,6 @@ class AddTransactionVC: UIViewController, UIPickerViewDelegate, UIPickerViewData
     func storeEntry(entryDate: Date, entryLabel: String, entryCost: Double, entryCategory: String){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        
         let newEntry = NSEntityDescription.insertNewObject(
             forEntityName: "Transaction", into: context)
         newEntry.setValue(entryDate, forKey: "date")
@@ -137,6 +147,16 @@ class AddTransactionVC: UIViewController, UIPickerViewDelegate, UIPickerViewData
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         category = userCategories[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label: UILabel
+        if let view = view as? UILabel { label = view }
+        else { label = UILabel() }
+        
+        label.font = UIFont(name: "Avenair-Light", size: 16.0)
+        label.text = userCategories[row]
+        return label
     }
     
     @IBAction func addCategory(_ sender: Any) {

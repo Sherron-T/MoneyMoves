@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  MoneyMovesTemplate
-//
-//  Created by Sherron Thomas on 10/5/21.
-//
-
 import UIKit
 import CoreData
 import Firebase
@@ -15,6 +8,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert], completionHandler: {
+            (success, error) in
+            if success {
+                print("Permission Granted")
+            } else {
+                print("There was a problem")
+            }
+        })
         return true
     }
 

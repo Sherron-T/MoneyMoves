@@ -1,10 +1,3 @@
-//
-//  RegisterVC.swift
-//  MoneyMoves
-//
-//  Created by Sherron Thomas on 10/4/21.
-//
-
 import UIKit
 import FirebaseAuth
 import Firebase
@@ -77,6 +70,7 @@ class RegisterVC: UIViewController {
             }
         }
     }
+    
     @IBAction func cancelRegister(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

@@ -1,10 +1,3 @@
-//
-//  ListVC.swift
-//  MoneyMoves
-//
-//  Created by Sherron Thomas on 10/4/21.
-//
-
 import UIKit
 import CoreData
 
@@ -16,12 +9,66 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var fetchedResults:[NSManagedObject] = []
     let formatter = DateFormatter()
     let formatter2 = NumberFormatter()
+    var filter: String = "ShowAll"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         fetchedResults = retrieveEntries()
+    }
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        let controller = UIAlertController(
+            title: "Alert Controller",
+            message: "Select category to filter",
+            preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil)
+        controller.addAction(cancelAction)
+        let showAllAction = UIAlertAction(
+            title: "Show All",
+            style: .default,
+            handler: { [self](action) in
+                self.filter = "ShowAll"
+                fetchedResults = retrieveEntries()
+                tableView.reloadData()
+            })
+        controller.addAction(showAllAction)
+        let userCategories = defaults.object(forKey: "categories") as! [String]
+        for category in userCategories {
+            let newAction = UIAlertAction(
+                title: category,
+                style: .default,
+                handler: { [self](action) in
+                    self.filter = category
+                    let predicate = NSPredicate(format: "category CONTAINS %@", filter)
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    let context = appDelegate.persistentContainer.viewContext
+                    let sectionSortDescriptor = NSSortDescriptor(key: "date", ascending: false)
+                    let sortDescriptors = [sectionSortDescriptor]
+                    let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Transaction")
+                    request.predicate = predicate
+                    request.sortDescriptors = sortDescriptors
+                    var newResults:[NSManagedObject]? = nil
+                    
+                    do {
+                        try newResults = context.fetch(request) as? [NSManagedObject]
+                        fetchedResults = newResults!
+                        tableView.reloadData()
+                    } catch {
+                        // If an error occurs
+                        let nserror = error as NSError
+                        NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                        abort()
+                    }
+                })
+            controller.addAction(newAction)
+        }
+        present(controller, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +78,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         formatter.dateFormat = "MM/dd/yy"
         formatter2.numberStyle = NumberFormatter.Style.currency
         changeDarkMode()
+        filter = "ShowAll"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,8 +100,10 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func retrieveEntries() -> [NSManagedObject] {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        
+        let sectionSortDescriptor = NSSortDescriptor(key: "date", ascending: false)
+        let sortDescriptors = [sectionSortDescriptor]
         let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Transaction")
+        request.sortDescriptors = sortDescriptors
         var fetchedResults:[NSManagedObject]? = nil
         
         do {

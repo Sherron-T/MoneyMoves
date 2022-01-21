@@ -1,10 +1,3 @@
-//
-//  TabBarController.swift
-//  MoneyMoves
-//
-//  Created by Sherron Thomas on 10/4/21.
-//
-
 import UIKit
 
 class TabBarController: UITabBarController {

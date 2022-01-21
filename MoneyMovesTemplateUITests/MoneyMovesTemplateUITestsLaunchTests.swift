@@ -1,10 +1,3 @@
-//
-//  MoneyMovesTemplateUITestsLaunchTests.swift
-//  MoneyMovesTemplateUITests
-//
-//  Created by Sherron Thomas on 10/5/21.
-//
-
 import XCTest
 
 class MoneyMovesTemplateUITestsLaunchTests: XCTestCase {

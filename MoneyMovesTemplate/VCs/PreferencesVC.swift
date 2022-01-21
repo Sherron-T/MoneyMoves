@@ -10,6 +10,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
+import UserNotifications
 
 let defaults = UserDefaults.standard
 
@@ -17,15 +18,19 @@ class PreferencesVC: UIViewController, UIColorPickerViewControllerDelegate, UIIm
     
     @IBOutlet weak var darkMode: UISwitch!
     @IBOutlet weak var soundEffects: UISwitch!
+    @IBOutlet weak var notificationSwitch: UISwitch!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var budgetLabel: UILabel!
+    
     let ref = Database.database().reference()
     let storage = Storage.storage().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         darkMode.setOn(defaults.bool(forKey: "darkMode"), animated: true)
+        soundEffects.setOn(defaults.bool(forKey: "soundEffects"), animated: true)
+        notificationSwitch.setOn(defaults.bool(forKey: "notifications"), animated: true)
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = profileImage.bounds.width / 2
         if(defaults.string(forKey: "userImage")! == "placeholder"){
@@ -39,6 +44,32 @@ class PreferencesVC: UIViewController, UIColorPickerViewControllerDelegate, UIIm
                     self.profileImage.image = UIImage(data: data!)
                 }
             }
+        }
+    }
+    
+    @IBAction func notificationsEnable(_ sender: Any) {
+        if notificationSwitch.isOn {
+            let content = UNMutableNotificationContent()
+            content.title = "Reminder"
+            content.body = "Use the MoneyMoves app to track your budget!"
+            var dateComponents = DateComponents()
+            dateComponents.calendar = Calendar.current
+            dateComponents.weekday = 4
+            dateComponents.hour = 12
+            let trigger = UNCalendarNotificationTrigger(
+                     dateMatching: dateComponents, repeats: true)
+            let uuidString = UUID().uuidString
+            let request = UNNotificationRequest(identifier: uuidString,
+                        content: content, trigger: trigger)
+            let notificationCenter = UNUserNotificationCenter.current()
+            notificationCenter.add(request) { (error) in
+               if error != nil {
+                   print("ERROR")
+               }
+            }
+        }
+        else {
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         }
     }
     
@@ -68,18 +99,23 @@ class PreferencesVC: UIViewController, UIColorPickerViewControllerDelegate, UIIm
     @IBAction func selectColorButton(_ sender: Any) {
         let colorPickerVC = UIColorPickerViewController()
         colorPickerVC.delegate = self
+        colorPickerVC.supportsAlpha = false
         present(colorPickerVC, animated: true)
     }
     
     func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
         let color = viewController.selectedColor
+        defaults.set(color.cgColor.components!, forKey: "defaultColor")
+        let alertController = UIAlertController(title: "Color Changed", message: "The accent color will be changed on next launch!", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
         let color = viewController.selectedColor
     }
     
-    // code to enable tapping on the background to remove software keyboard
     func textFieldShouldReturn(textField:UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -172,7 +208,6 @@ class PreferencesVC: UIViewController, UIColorPickerViewControllerDelegate, UIIm
         present(controller, animated: true, completion: nil)
     }
     
-    //Modify code cause this is copied rn
     func showImagePickerController(sourceType: UIImagePickerController.SourceType) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -186,9 +221,6 @@ class PreferencesVC: UIViewController, UIColorPickerViewControllerDelegate, UIIm
             return
         }
         self.profileImage.image = editedImage.withRenderingMode(.alwaysOriginal)
-        /*else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            self.profileImage.image = originalImage.withRenderingMode(.alwaysOriginal)
-        }*/
         guard let imageData = editedImage.pngData() else {
             return
         }

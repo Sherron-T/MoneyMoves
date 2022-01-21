@@ -1,0 +1,6 @@
+framework module Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests {
+  umbrella header "Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

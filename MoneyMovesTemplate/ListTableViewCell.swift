@@ -1,10 +1,3 @@
-//
-//  ListTableViewCell.swift
-//  MoneyMovesTemplate
-//
-//  Created by Sherron Thomas on 10/28/21.
-//
-
 import UIKit
 
 class ListTableViewCell: UITableViewCell {

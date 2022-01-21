@@ -1,21 +1,22 @@
-//
-//  SceneDelegate.swift
-//  MoneyMovesTemplate
-//
-//  Created by Sherron Thomas on 10/5/21.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        let defaultColor = defaults.object(forKey: "defaultColor")
+        if defaultColor == nil {
+            window?.tintColor = UIColor.systemBlue
+        }
+        else{
+            let colorComponents = defaultColor! as! [CGFloat]
+            let selectedColor = UIColor(red: colorComponents[0], green: colorComponents[1], blue: colorComponents[2], alpha: 1)
+            window?.tintColor = selectedColor
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -49,7 +50,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
 

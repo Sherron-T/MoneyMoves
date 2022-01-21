@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		2306A11C33072AB25BB29151 /* Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5876DD96448BA1AF13761D4F /* Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests.framework */; };
 		BC3579C4272A7DF30051E896 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3579C3272A7DF30051E896 /* ListTableViewCell.swift */; };
+		BC43FD9B2759560B003381B3 /* money.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC43FD9A2759560B003381B3 /* money.mp3 */; };
 		BC5EBC50272A71980094218F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC5EBC4F272A71980094218F /* GoogleService-Info.plist */; };
+		BC741B0527505144007D3B66 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC741B0427505144007D3B66 /* PieChart.swift */; };
 		BCBDBA8B270CE57700E96805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBA8A270CE57700E96805 /* AppDelegate.swift */; };
 		BCBDBA8D270CE57700E96805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBA8C270CE57700E96805 /* SceneDelegate.swift */; };
 		BCBDBA92270CE57700E96805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBDBA90270CE57700E96805 /* Main.storyboard */; };
@@ -24,7 +26,6 @@
 		BCBDBAC8270CE9F200E96805 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC0270CE9F100E96805 /* ListVC.swift */; };
 		BCBDBAC9270CE9F200E96805 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC1270CE9F200E96805 /* HomeVC.swift */; };
 		BCBDBACA270CE9F200E96805 /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC2270CE9F200E96805 /* PreferencesVC.swift */; };
-		BCBDBACB270CE9F200E96805 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC3270CE9F200E96805 /* CalendarVC.swift */; };
 		BCBDBACC270CE9F200E96805 /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBAC4270CE9F200E96805 /* AddTransactionVC.swift */; };
 		BCBDBACF270CF60000E96805 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDBACE270CF60000E96805 /* LoginVC.swift */; };
 		D353B41D192DEC06C45EDC5F /* Pods_MoneyMovesTemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B906AE168A8864E106553ABD /* Pods_MoneyMovesTemplateTests.framework */; };
@@ -59,7 +60,9 @@
 		B906AE168A8864E106553ABD /* Pods_MoneyMovesTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyMovesTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3579C2272A72C30051E896 /* MoneyMovesTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoneyMovesTemplate.entitlements; sourceTree = "<group>"; };
 		BC3579C3272A7DF30051E896 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		BC43FD9A2759560B003381B3 /* money.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = money.mp3; path = MoneyMovesTemplate/sounds/money.mp3; sourceTree = SOURCE_ROOT; };
 		BC5EBC4F272A71980094218F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC741B0427505144007D3B66 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		BCBDBA87270CE57700E96805 /* MoneyMovesTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyMovesTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBDBA8A270CE57700E96805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCBDBA8C270CE57700E96805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +81,6 @@
 		BCBDBAC0270CE9F100E96805 /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		BCBDBAC1270CE9F200E96805 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BCBDBAC2270CE9F200E96805 /* PreferencesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesVC.swift; sourceTree = "<group>"; };
-		BCBDBAC3270CE9F200E96805 /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		BCBDBAC4270CE9F200E96805 /* AddTransactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
 		BCBDBACE270CF60000E96805 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		FB89AF4E61CB28B73773BB8D /* Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests/Pods-MoneyMovesTemplate-MoneyMovesTemplateUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC43FD9C27595619003381B3 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BC43FD9A2759560B003381B3 /* money.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		BC860AFE5753AFE190C5590C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +172,7 @@
 			children = (
 				BC3579C2272A72C30051E896 /* MoneyMovesTemplate.entitlements */,
 				BC5EBC4F272A71980094218F /* GoogleService-Info.plist */,
+				BC43FD9C27595619003381B3 /* sounds */,
 				BCBDBABD270CE9C800E96805 /* VCs */,
 				BCBDBA8A270CE57700E96805 /* AppDelegate.swift */,
 				BCBDBA8C270CE57700E96805 /* SceneDelegate.swift */,
@@ -171,6 +182,7 @@
 				BCBDBA9B270CE57800E96805 /* Info.plist */,
 				BCBDBA93270CE57700E96805 /* MoneyMovesTemplate.xcdatamodeld */,
 				BC3579C3272A7DF30051E896 /* ListTableViewCell.swift */,
+				BC741B0427505144007D3B66 /* PieChart.swift */,
 			);
 			path = MoneyMovesTemplate;
 			sourceTree = "<group>";
@@ -196,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				BCBDBAC4270CE9F200E96805 /* AddTransactionVC.swift */,
-				BCBDBAC3270CE9F200E96805 /* CalendarVC.swift */,
 				BCBDBAC1270CE9F200E96805 /* HomeVC.swift */,
 				BCBDBAC0270CE9F100E96805 /* ListVC.swift */,
 				BCBDBAC2270CE9F200E96805 /* PreferencesVC.swift */,
@@ -317,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCBDBA9A270CE57800E96805 /* LaunchScreen.storyboard in Resources */,
+				BC43FD9B2759560B003381B3 /* money.mp3 in Resources */,
 				BC5EBC50272A71980094218F /* GoogleService-Info.plist in Resources */,
 				BCBDBA97270CE57800E96805 /* Assets.xcassets in Resources */,
 				BCBDBA92270CE57700E96805 /* Main.storyboard in Resources */,
@@ -447,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC741B0527505144007D3B66 /* PieChart.swift in Sources */,
 				BCBDBACF270CF60000E96805 /* LoginVC.swift in Sources */,
 				BCBDBAC8270CE9F200E96805 /* ListVC.swift in Sources */,
 				BCBDBACA270CE9F200E96805 /* PreferencesVC.swift in Sources */,
@@ -455,7 +468,6 @@
 				BC3579C4272A7DF30051E896 /* ListTableViewCell.swift in Sources */,
 				BCBDBAC6270CE9F200E96805 /* TabBarController.swift in Sources */,
 				BCBDBACC270CE9F200E96805 /* AddTransactionVC.swift in Sources */,
-				BCBDBACB270CE9F200E96805 /* CalendarVC.swift in Sources */,
 				BCBDBA8B270CE57700E96805 /* AppDelegate.swift in Sources */,
 				BCBDBA8D270CE57700E96805 /* SceneDelegate.swift in Sources */,
 				BCBDBAC7270CE9F200E96805 /* RegisterVC.swift in Sources */,

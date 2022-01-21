@@ -1,10 +1,3 @@
-//
-//  MoneyMovesTemplateTests.swift
-//  MoneyMovesTemplateTests
-//
-//  Created by Sherron Thomas on 10/5/21.
-//
-
 import XCTest
 @testable import MoneyMovesTemplate
 

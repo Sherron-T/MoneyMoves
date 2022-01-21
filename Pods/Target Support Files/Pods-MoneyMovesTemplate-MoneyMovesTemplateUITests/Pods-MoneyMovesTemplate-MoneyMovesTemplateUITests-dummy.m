@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests : NSObject
+@end
+@implementation PodsDummy_Pods_MoneyMovesTemplate_MoneyMovesTemplateUITests
+@end

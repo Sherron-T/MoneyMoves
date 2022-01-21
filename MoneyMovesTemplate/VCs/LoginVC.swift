@@ -1,10 +1,3 @@
-//
-//  LoginVC.swift
-//  MoneyMovesTemplate
-//
-//  Created by Sherron Thomas on 10/5/21.
-//
-
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -12,12 +5,22 @@ import FirebaseDatabase
 
 class LoginVC: UIViewController {
     
+    @IBOutlet weak var pngegg: UIImageView!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
     let ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 1,
+                              delay: 0.2,
+                            options: [.repeat, .autoreverse, .curveEaseInOut],
+                       animations: { self.pngegg.transform = self.pngegg.transform.translatedBy(x: 50, y: 0)},
+                       completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +28,6 @@ class LoginVC: UIViewController {
         changeDarkMode()
         Auth.auth().addStateDidChangeListener() {
           auth, user in
-          
           if user != nil {
               self.emailField.text = nil
               self.passwordField.text = nil
